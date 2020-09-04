@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yalona <yalona@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/04 14:44:32 by yalona            #+#    #+#             */
-/*   Updated: 2020/09/04 15:40:03 by yalona           ###   ########.fr       */
+/*   Created: 2020/09/04 16:05:02 by yalona            #+#    #+#             */
+/*   Updated: 2020/09/04 16:46:51 by yalona           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include <stdio.h>
 
-# include <stdarg.h>
-# include <ctype.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
-
-typedef struct  s_print
+int main(void)
 {
-    va_list args;
-    const char *format;
-    int len;
+  float a;
+  char *str;
+  int b;
 
-
-
-
-}               t_print;
-
-int printf(const char *format, ...);
-#endif
+  str = "hello";
+  b = 21;
+  a = 123.9;
+  printf("%.4f\n", a);
+  printf("%3s\n", str);
+  printf("%06d\n", b);
+  //printf("%p\n", main);
+  
+}
