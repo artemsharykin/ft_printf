@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yalona <yalona@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yalona <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/04 16:05:02 by yalona            #+#    #+#             */
-/*   Updated: 2020/09/11 15:56:35 by yalona           ###   ########.fr       */
+/*   Created: 2019/09/17 20:10:32 by yalona            #+#    #+#             */
+/*   Updated: 2019/09/17 20:21:50 by yalona           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int main(void)
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-  int a;
-  char *str;
-  int b;
-  int c;
-
-  str = "hello";
-  b = 0;
-  a = 123345;
-  c = 3;
-  printf("%5d\n", a);
-  printf("%3s\n", str);
-  printf("%5d\n", b);
-  //printf("%p\n", main);
-  
+	if (*alst && alst)
+	{
+		del((*alst)->content, (*alst)->content_size);
+		free(*alst);
+		*alst = NULL;
+	}
 }

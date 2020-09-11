@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yalona <yalona@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yalona <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/04 16:05:02 by yalona            #+#    #+#             */
-/*   Updated: 2020/09/11 15:56:35 by yalona           ###   ########.fr       */
+/*   Created: 2019/09/04 14:47:20 by yalona            #+#    #+#             */
+/*   Updated: 2019/09/19 19:29:36 by yalona           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int main(void)
+double	ft_sqrt(double nb)
 {
-  int a;
-  char *str;
-  int b;
-  int c;
+	double i;
 
-  str = "hello";
-  b = 0;
-  a = 123345;
-  c = 3;
-  printf("%5d\n", a);
-  printf("%3s\n", str);
-  printf("%5d\n", b);
-  //printf("%p\n", main);
-  
+	i = 1;
+	if (nb > 0)
+	{
+		while (i < nb)
+		{
+			if ((i * i) == nb)
+				return (i);
+			i++;
+		}
+	}
+	return (0);
 }

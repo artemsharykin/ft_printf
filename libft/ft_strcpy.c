@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yalona <yalona@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yalona <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/04 16:05:02 by yalona            #+#    #+#             */
-/*   Updated: 2020/09/11 15:56:35 by yalona           ###   ########.fr       */
+/*   Created: 2019/08/06 22:03:57 by yalona            #+#    #+#             */
+/*   Updated: 2019/09/19 18:50:40 by yalona           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int main(void)
+char	*ft_strcpy(char *dest, const char *src)
 {
-  int a;
-  char *str;
-  int b;
-  int c;
+	int i;
 
-  str = "hello";
-  b = 0;
-  a = 123345;
-  c = 3;
-  printf("%5d\n", a);
-  printf("%3s\n", str);
-  printf("%5d\n", b);
-  //printf("%p\n", main);
-  
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

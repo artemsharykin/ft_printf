@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yalona <yalona@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yalona <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/04 16:05:02 by yalona            #+#    #+#             */
-/*   Updated: 2020/09/11 15:56:35 by yalona           ###   ########.fr       */
+/*   Created: 2019/09/15 17:02:20 by yalona            #+#    #+#             */
+/*   Updated: 2019/09/18 16:53:09 by yalona           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int main(void)
+int	ft_strequ(char const *s1, char const *s2)
 {
-  int a;
-  char *str;
-  int b;
-  int c;
-
-  str = "hello";
-  b = 0;
-  a = 123345;
-  c = 3;
-  printf("%5d\n", a);
-  printf("%3s\n", str);
-  printf("%5d\n", b);
-  //printf("%p\n", main);
-  
+	if (s1 == NULL || s2 == NULL)
+		return (0);
+	if (ft_strcmp(s1, s2) == 0)
+		return (1);
+	else
+		return (0);
 }

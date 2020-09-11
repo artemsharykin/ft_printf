@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yalona <yalona@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yalona <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/04 16:05:02 by yalona            #+#    #+#             */
-/*   Updated: 2020/09/11 15:56:35 by yalona           ###   ########.fr       */
+/*   Created: 2019/09/15 14:47:27 by yalona            #+#    #+#             */
+/*   Updated: 2019/09/18 17:06:37 by yalona           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int main(void)
+void	ft_strclr(char *s)
 {
-  int a;
-  char *str;
-  int b;
-  int c;
-
-  str = "hello";
-  b = 0;
-  a = 123345;
-  c = 3;
-  printf("%5d\n", a);
-  printf("%3s\n", str);
-  printf("%5d\n", b);
-  //printf("%p\n", main);
-  
+	while (!(s == NULL) && *s != '\0')
+	{
+		*s = '\0';
+		s++;
+	}
 }

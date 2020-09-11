@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_count_words.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yalona <yalona@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yalona <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/04 16:05:02 by yalona            #+#    #+#             */
-/*   Updated: 2020/09/11 15:56:35 by yalona           ###   ########.fr       */
+/*   Created: 2019/09/17 21:57:08 by yalona            #+#    #+#             */
+/*   Updated: 2019/09/17 21:57:23 by yalona           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int main(void)
+int			ft_count_words(char const *s, char del)
 {
-  int a;
-  char *str;
-  int b;
-  int c;
+	int		i;
+	int		g;
 
-  str = "hello";
-  b = 0;
-  a = 123345;
-  c = 3;
-  printf("%5d\n", a);
-  printf("%3s\n", str);
-  printf("%5d\n", b);
-  //printf("%p\n", main);
-  
+	i = 0;
+	g = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] != del)
+		{
+			g++;
+			while (s[i] != del && s[i + 1] != '\0')
+				i++;
+		}
+		i++;
+	}
+	return (g);
 }
